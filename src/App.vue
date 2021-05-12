@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="grid grid-cols-2 mt-4 ml-12 palette-secondary">
+    <div class="text-yellow-500 font-semibold text-secondary-60">
+      Quadris
+    </div>
+    <div class="flex justify-end pr-12">
+      <MenuDropdown :dataSet="dataSet" :otherDataSet="otherDataSet" />
+    </div>
+</div>
+  <div v-show="displayProviders">
+    <ProviderList/>
+  </div>
+  <div v-show="!displayProviders">
+    <ClaimsList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProviderList from './components/ProviderList.vue'
+import ClaimsList from './components/ClaimsList.vue'
+import MenuDropdown from './components/MenuDropdown.vue'
 
 export default {
   name: 'App',
+  data : function(){
+    return {
+      displayProviders : true,
+      dataSet : "Providers",
+      otherDataSet: "Claims",
+    }
+  },
   components: {
-    HelloWorld
+    ProviderList,
+    ClaimsList,
+    MenuDropdown
+  },
+  methods: {
+        toggleData(){
+          var temp = this.dataSet;
+          this.dataSet = this.otherDataSet;
+          this.otherDataSet = temp;
+          this.displayProviders = !this.displayProviders;
+      }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

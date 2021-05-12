@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1 {
+    @apply text-headline1;
+  }
+
+  h2 {
+    @apply text-headline2;
+  }
+
+  h3 {
+    @apply text-headline3;
+  }
+
+  h4 {
+    @apply text-headline4;
+  }
+
+  h5 {
+    @apply text-subtitle1;
+  }
+
+  h6 {
+    @apply text-subtitle2;
+  }
+
+  p {
+    @apply text-body-small;
+  }
+
+  small {
+    @apply text-caption;
+  }
+
+  h1,
+  .text-headline1 {
+    @apply font-bold;
+  }
+
+  h2,
+  .text-headline2 {
+    @apply font-normal;
+  }
+
+  h3,
+  .text-headline3 {
+    @apply font-bold;
+  }
+
+  h4,
+  .text-headline4 {
+    @apply font-normal;
+  }
+
+  h5,
+  .text-subtitle1 {
+    @apply font-bold;
+  }
+
+  h6,
+  .text-subtitle2 {
+    @apply font-bold uppercase;
+  }
+
+  .text-body-large {
+    @apply font-normal;
+  }
+
+  p,
+  .text-body-small {
+    @apply font-normal;
+  }
+
+  small,
+  .text-caption {
+    @apply font-normal;
+  }
+
+  .text-button {
+    @apply font-bold uppercase;
+  }
+
+  .text-overline {
+    @apply font-bold uppercase;
+  }
+}
+
+@layer components {
+  .palette-background {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-surface {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-primary {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-primary-variant {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-secondary {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-secondary-variant {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-error {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-success {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-warning {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .feather-ripple {
+    @apply absolute bg-current rounded-full;
+  }
+
+  /* purgecss start ignore */
+  .feather-ripple[data-state="initial"] {
+    @apply opacity-0 scale-0 transform transition-none;
+  }
+
+  .feather-ripple[data-state="growing"] {
+    @apply duration-300 ease-out opacity-30 scale-100 transform transition-transform;
+  }
+
+  .feather-ripple[data-state="fading"] {
+    @apply duration-100 ease-out opacity-0 scale-100 transform transition-opacity;
+  }
+  /* purgecss end ignore */
+}
+
+@layer components {
+  .card {
+    @apply border border-transparent elevation-1 palette-surface rounded xl:border-foreground-10 xl:elevation-0;
+  }
+}
+
+@layer components {
+  .btn-primary,
+  .btn-secondary,
+  .btn-text {
+    @apply border-2 overflow-hidden px-4 relative rounded text-button whitespace-nowrap disabled:pointer-events-none focus:overlay-current-before hover:overlay-current-after;
+
+    /* Workaround for Safari bug where child transition caused overflow-hidden to not be respected for rounded borders. */
+    will-change: transform;
+  }
+
+  .btn-primary {
+    @apply bg-interactive border-transparent shadow-2 text-on-interactive disabled:bg-foreground-20 disabled:shadow-none disabled:text-foreground-40 focus:outline-none focus:border-foreground hover:shadow-4;
+  }
+
+  .btn-secondary {
+    @apply border-foreground-20 text-interactive disabled:border-foreground-10 disabled:text-foreground-40 focus:outline-none focus:border-interactive;
+  }
+
+  .btn-text {
+    @apply border-transparent text-interactive disabled:bg-transparent disabled:text-foreground-40 focus:outline-none focus:border-interactive;
+  }
+
+  .btn-icon {
+    @apply border-2 border-solid border-transparent flex items-center overflow-hidden p-1 relative rounded-full text-interactive whitespace-nowrap disabled:border-foreground-10 disabled:pointer-events-none disabled:text-foreground-40 focus:border-interactive focus:overlay-current-before focus:outline-none hover:overlay-current-after;
+  }
+}
+
+@layer components {
+  .btn-back {
+    @apply border border-interactive inline-flex items-center overflow-hidden p-1 relative rounded-full text-button text-interactive whitespace-nowrap disabled:border-foreground-10 disabled:pointer-events-none disabled:text-foreground-40 focus:overlay-current-before focus:outline-none focus:shadow-4 hover:shadow-4 hover:overlay-current-after;
+
+    /* Workaround for Safari bug where child transition caused overflow-hidden to not be respected for rounded borders. */
+    will-change: transform;
+  }
+
+  .btn-back-text {
+    @apply duration-300 delay-500 leading-none px-0 max-w-0 overflow-hidden transition-all group-hover:max-w-7xl group-hover:px-2;
+  }
+}
+
+@layer components {
+  .field-input-group {
+    @apply border border-foreground-60 flex items-center px-3 relative rounded z-0 focus-within:border-interactive;
+  }
+
+  .field-input-prefix {
+    @apply absolute border-l-4 border-transparent duration-300 left-0 opacity-0 inset-y-2 transform transition-all w-1 group-focus-within:opacity-0 group-focus-within:scale-x-0 group-focus-within:translate-x-2 group-hover:border-interactive group-hover:opacity-100;
+  }
+
+  .field-input {
+    @apply appearance-none bg-transparent block caret-auto py-2 text-body-small w-full focus:outline-none;
+  }
+
+  .field-input-label {
+    @apply absolute bg-background duration-300 px-3 py-2 left-1 text-body-small text-foreground top-0 transition-transform -z-1 group-focus-within:ml-1 group-focus-within:scale-75 group-focus-within:transform group-focus-within:-translate-y-4 group-focus-within:z-0;
+  }
+
+  .field-input-icon {
+    @apply h-5 w-5 fill-foreground-90;
+  }
+
+  .field-description {
+    @apply my-1 px-3 text-foreground text-caption;
+  }
+
+  /* 
+    text inputs require `placeholder=" "` for this material label state/selector pattern
+    see: https://notiz.dev/blog/floating-form-field-with-tailwindcss
+  */
+  /* purgecss start ignore */
+  .field input:not(:placeholder-shown) ~ label {
+    @apply ml-1 p-1 transform scale-75 -translate-y-4 z-0;
+  }
+  /* purgecss end ignore */
+}
+
+@layer components {
+  .checkbox {
+    @apply cursor-pointer inline-flex items-center space-x-1;
+  }
+
+  .checkbox-input-group {
+    @apply relative text-interactive;
+  }
+
+  .checkbox-input {
+    @apply absolute h-0 overflow-hidden w-0;
+
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .checkbox-icon {
+    @apply h-6 w-6;
+  }
+
+  .checkbox-ring {
+    @apply border-2 border-solid border-transparent overflow-hidden rounded-full p-1 group-focus-within:border-interactive group-focus-within:overlay-current-before group-hover:overlay-current-after;
+  }
+
+  .checkbox-icon-background {
+    @apply fill-interactive hidden;
+  }
+
+  .checkbox-icon-outline {
+    @apply fill-interactive;
+  }
+
+  .checkbox-icon-checked {
+    @apply duration-300 ease-in-out fill-none opacity-0 stroke-2 stroke-on-interactive transition-stroke-dashoffset;
+
+    stroke-dashoffset: 30;
+    stroke-dasharray: 30;
+  }
+
+  .checkbox-icon-indeterminate {
+    @apply ease-out opacity-0 origin-center stroke-2 stroke-on-interactive transition;
+
+    transform: rotateZ(135deg);
+  }
+
+  /* purgecss start ignore */
+  .checkbox-input:checked + .checkbox-ring > .checkbox-icon > .checkbox-icon-background {
+    @apply block;
+  }
+
+  .checkbox-input:not([data-indeterminate]):checked + .checkbox-ring > .checkbox-icon > .checkbox-icon-checked {
+    @apply opacity-100;
+
+    stroke-dashoffset: 0;
+  }
+
+  .checkbox-input[data-indeterminate]:checked + .checkbox-ring > .checkbox-icon > .checkbox-icon-indeterminate {
+    @apply opacity-100;
+
+    transform: rotateZ(0deg);
+  }
+
+  .checkbox-input:not(:disabled) + .checkbox-ring {
+    @apply group-hover:bg-interactive-10;
+  }
+
+  .checkbox-input:disabled {
+    @apply pointer-events-none;
+  }
+
+  .checkbox-input:disabled + .checkbox-ring > .checkbox-icon > .checkbox-icon-background {
+    @apply fill-foreground-40;
+  }
+
+  .checkbox-input:disabled + .checkbox-ring > .checkbox-icon > .checkbox-icon-outline {
+    @apply fill-foreground-40;
+  }
+  /* purgecss end ignore */
+}
+
+@layer components {
+  .radiobutton {
+    @apply cursor-pointer inline-flex items-center space-x-1;
+  }
+
+  .radiobutton-input-group {
+    @apply relative text-interactive;
+  }
+
+  .radiobutton-input {
+    @apply absolute h-0 overflow-hidden w-0;
+
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .radiobutton-icon {
+    @apply h-6 w-6;
+  }
+
+  .radiobutton-ring {
+    @apply border-2 border-solid border-transparent overflow-hidden rounded-full p-1 group-focus-within:border-interactive group-focus-within:overlay-current-before group-hover:overlay-current-after;
+  }
+
+  .radiobutton-icon-outline {
+    @apply fill-interactive;
+  }
+
+  .radiobutton-icon-checked {
+    @apply duration-300 ease-in-out fill-interactive opacity-0 origin-center scale-0 transform transition-transform;
+  }
+
+  /* purgecss start ignore */
+  .radiobutton-input:checked + .radiobutton-ring > .radiobutton-icon > .radiobutton-icon-checked {
+    @apply opacity-100 scale-100;
+  }
+
+  .radiobutton-input:not(:disabled) + .radiobutton-ring {
+    @apply group-hover:bg-interactive-10;
+  }
+
+  .radiobutton-input:disabled {
+    @apply pointer-events-none;
+  }
+
+  .radiobutton-input:disabled + .radiobutton-ring > .radiobutton-icon > .radiobutton-icon-outline {
+    @apply fill-foreground-40;
+  }
+
+  .radiobutton-input:disabled + .radiobutton-ring > .radiobutton-icon > .radiobutton-icon-checked {
+    @apply fill-foreground-40;
+  }
+  /* purgecss end ignore */
+}
+
+@layer components {
+  .table {
+    @apply border-separate;
+
+    border-spacing: 0;
+  }
+
+  .table-header {
+    @apply border-b border-foreground-10 h-14 px-4 py-0 text-subtitle1;
+  }
+
+  .table-header-button {
+    @apply flex space-x-1 text-subtitle1 w-full focus:outline-none;
+  }
+
+  .table-header-button-icon {
+    @apply flex h-6 items-center justify-center overflow-hidden p-1 rounded-full text-interactive w-6 group-focus-within:overlay-current-before group-hover:overlay-current-after;
+  }
+
+  .table-header-checkbox {
+    @apply border-b border-foreground-10 flex h-14 justify-center p-0 text-center;
+  }
+
+  .table-cell {
+    @apply border-b border-foreground-10 h-14 px-4 py-0;
+  }
+
+  .table-cell-checkbox {
+    @apply border-b border-foreground-10 flex h-14 justify-center p-0 text-center;
+  }
+
+  /* purgecss start ignore */
+  .table.condensed .table-header,
+  .table.condensed .table-header-checkbox,
+  .table.condensed .table-cell,
+  .table.condensed .table-cell-checkbox {
+    @apply h-9;
+  }
+  /* purgecss end ignore */
+}
