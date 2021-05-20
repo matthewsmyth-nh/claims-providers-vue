@@ -3,7 +3,7 @@
         <RadioGroupOption v-slot="{ checked }" :value="value" class="flex">
             <FeatherButton :class="checked ? 'bg-primary' : ''" class="rounded-full h-6 w-6 border-primary border-2 focus:outline-none mr-2 flex justify-center" >
             </FeatherButton>
-            <div class="rounded-md ">{{value}}</div>
+            <div class="rounded-md "><slot /> {{checked}} </div>
         </RadioGroupOption>
     </div>
 </template>

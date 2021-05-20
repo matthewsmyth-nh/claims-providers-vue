@@ -52,7 +52,7 @@ name: 'ProviderList',
             'Content-Type': 'application/json',
             'Accept' : '*/*',
             },
-          body: JSON.stringify({ query: '{allProviders(first: 575) { edges { node { id name claimsByProviderId {totalCount}}}}}'}),
+          body: JSON.stringify({ query: '{allProviders(first: 590) { edges { node { id name claimsByProviderId {totalCount}}}}}'}),
         })
         .then(res => res.json())
         .then(json => this.providers = json.data.allProviders.edges);

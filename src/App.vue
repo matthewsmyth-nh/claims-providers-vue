@@ -22,12 +22,19 @@
     <HeadlessRadioGroup />
   </div>
   <div>
-  <FeatherRadioGroup>
+  <FeatherRadioGroup :value="plan" @input="plan = $event">
       <FeatherRadioGroupLabel>Plan</FeatherRadioGroupLabel>
-      <FeatherRadioGroupOption value="Startup"/>
-      <FeatherRadioGroupOption value="Business"/>
-      <FeatherRadioGroupOption value="Enterprise"/>
+      <FeatherRadioGroupOption value="startup">
+        Startup
+      </FeatherRadioGroupOption>
+      <FeatherRadioGroupOption value="business">
+        Business
+      </FeatherRadioGroupOption>
+      <FeatherRadioGroupOption value="enterprise">
+        Enterprise
+      </FeatherRadioGroupOption>
   </FeatherRadioGroup>
+  <div>{{plan}}</div>
   </div>
 </template>
 
@@ -53,7 +60,6 @@ export default {
       displayProviders : true,
       dataSet : "Providers",
       otherDataSet: "Claims",
-      startup : 7,
       providers: []
     }
   },
@@ -82,7 +88,7 @@ export default {
     const isDark = useDark();
     const toggleDark = useToggle(isDark);
 
-    const plan = ref('Startup')
+    const plan = ref('startup')
 
     return {
       isDark,
