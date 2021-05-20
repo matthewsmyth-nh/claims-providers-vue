@@ -1,12 +1,10 @@
 <template>
-    <slot />
-    <RadioGroupLabel>{{value}}</RadioGroupLabel>
+    <RadioGroupLabel class="sr-only"><slot /></RadioGroupLabel>
 </template>
 
 <script> 
 import {RadioGroupLabel} from '@headlessui/vue';
 export default {
-    props: ['value'],
   components : {
       RadioGroupLabel
   }

@@ -23,7 +23,7 @@
   </div>
   <div>
   <FeatherRadioGroup>
-      <FeatherRadioGroupLabel></FeatherRadioGroupLabel>
+      <FeatherRadioGroupLabel>Plan</FeatherRadioGroupLabel>
       <FeatherRadioGroupOption value="Startup"/>
       <FeatherRadioGroupOption value="Business"/>
       <FeatherRadioGroupOption value="Enterprise"/>
