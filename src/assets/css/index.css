@@ -1,0 +1,9 @@
+@import './tailwind.css';
+@import './themes/eviti.css';
+
+html {
+    background-color: #f4f4f4;
+  }
+  html.dark {
+    background-color: #121212;
+  }

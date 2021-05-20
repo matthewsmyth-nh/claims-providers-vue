@@ -3,6 +3,44 @@
 @tailwind utilities;
 
 @layer components {
+  .palette-background {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-surface {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-primary {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-primary-variant {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-secondary {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-secondary-variant {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-error {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-success {
+    @apply bg-background text-foreground;
+  }
+
+  .palette-warning {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
   h1 {
     @apply text-headline1;
   }
@@ -89,58 +127,20 @@
 }
 
 @layer components {
-  .palette-background {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-surface {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-primary {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-primary-variant {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-secondary {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-secondary-variant {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-error {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-success {
-    @apply bg-background text-foreground;
-  }
-
-  .palette-warning {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
   .feather-ripple {
     @apply absolute bg-current rounded-full;
   }
 
   /* purgecss start ignore */
-  .feather-ripple[data-state="initial"] {
+  .feather-ripple[data-state='initial'] {
     @apply opacity-0 scale-0 transform transition-none;
   }
 
-  .feather-ripple[data-state="growing"] {
+  .feather-ripple[data-state='growing'] {
     @apply duration-300 ease-out opacity-30 scale-100 transform transition-transform;
   }
 
-  .feather-ripple[data-state="fading"] {
+  .feather-ripple[data-state='fading'] {
     @apply duration-100 ease-out opacity-0 scale-100 transform transition-opacity;
   }
   /* purgecss end ignore */

@@ -3,7 +3,7 @@
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton
-          class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-opacity-75"
+          class="inline-flex justify-center w-full px-4 py-2 bg-warning text-background hover:bg-warning-60 rounded-md focus:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-opacity-75"
         >
           {{dataSet}}
         </MenuButton>
@@ -18,7 +18,7 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          class="absolute right-0 w-56 mt-2 origin-top-right palette-warning bg-foreground hover:bg-foreground-50 text-background divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
       toggleData(){
-          this.$parent.toggleData();
+          this.$parent.$parent.toggleData();
       }
   }
 }

@@ -1,0 +1,168 @@
+:root {
+    --feather-color-background: 244, 244, 244; /* #f4f4f4 */
+    --feather-color-primary: 0, 94, 152; /* #005e98 */
+    --feather-color-primary-variant: 0, 59, 105; /* #003b69 */
+    --feather-color-secondary: 0, 53, 131; /* #003583 */
+    --feather-color-secondary-variant: 25, 91, 181; /* #195bb5 */
+    --feather-color-error: 165, 2, 31; /* #a5021f */
+    --feather-color-success: 15, 110, 0; /*#0f6e00 */
+    --feather-color-warning: 255, 172, 38; /* #ffac26 */
+    --feather-color-on-color: 255, 255, 255; /* #ffffff */
+    --feather-color-on-surface: 0, 0, 0; /* #000000 */
+    --feather-color-on-warning: 0, 0, 0; /* #000000 */
+    --feather-color-interactive-on-color: 255, 255, 255; /* #ffffff */
+    --feather-color-interactive-on-surface: 0, 94, 152; /* #005e98 */
+    --feather-color-interactive-on-warning: 0, 0, 0; /* #000000 */
+    --feather-color-on-interactive-on-color: 0, 0, 0; /* #000000 */
+    --feather-color-on-interactive-on-surface: 255, 255, 255; /* #ffffff */
+    --feather-color-on-interactive-on-warning: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-0: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-1: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-2: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-3: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-4: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-6: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-8: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-12: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-16: 255, 255, 255; /* #ffffff */
+    --feather-color-elevation-24: 255, 255, 255; /* #ffffff */
+    --feather-font-family-sans: ProximaNovaA, Helvetica, Arial, sans-serif;
+    --feather-font-weight-light: 300;
+    --feather-font-weight-normal: 400;
+    --feather-font-weight-bold: 700;
+    --feather-shadow-0: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+    --feather-shadow-1: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-2: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-3: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-4: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-5: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
+      0 1px 14px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-6: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-7: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14),
+      0 2px 16px 1px rgba(0, 0, 0, 0.12);
+    --feather-shadow-8: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --feather-shadow-9: 0 5px 6px -3px rgba(0, 0, 0, 0.2), 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12);
+    --feather-shadow-10: 0 6px 6px -3px rgba(0, 0, 0, 0.2), 0 10px 14px 1px rgba(0, 0, 0, 0.14),
+      0 4px 18px 3px rgba(0, 0, 0, 0.12);
+    --feather-shadow-11: 0 6px 7px -4px rgba(0, 0, 0, 0.2), 0 11px 15px 1px rgba(0, 0, 0, 0.14),
+      0 4px 20px 3px rgba(0, 0, 0, 0.12);
+    --feather-shadow-12: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-13: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14),
+      0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-14: 0 7px 9px -4px rgba(0, 0, 0, 0.2), 0 14px 21px 2px rgba(0, 0, 0, 0.14),
+      0 5px 26px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-15: 0 8px 9px -5px rgba(0, 0, 0, 0.2), 0 15px 22px 2px rgba(0, 0, 0, 0.14),
+      0 6px 28px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-16: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-17: 0 8px 11px -5px rgba(0, 0, 0, 0.2), 0 17px 26px 2px rgba(0, 0, 0, 0.14),
+      0 6px 32px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-18: 0 9px 11px -5px rgba(0, 0, 0, 0.2), 0 18px 28px 2px rgba(0, 0, 0, 0.14),
+      0 7px 34px 6px rgba(0, 0, 0, 0.12);
+    --feather-shadow-19: 0 9px 12px -6px rgba(0, 0, 0, 0.2), 0 19px 29px 2px rgba(0, 0, 0, 0.14),
+      0 7px 36px 6px rgba(0, 0, 0, 0.12);
+    --feather-shadow-20: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 20px 31px 3px rgba(0, 0, 0, 0.14),
+      0 8px 38px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-21: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 21px 33px 3px rgba(0, 0, 0, 0.14),
+      0 8px 40px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-22: 0 10px 14px -6px rgba(0, 0, 0, 0.2), 0 22px 35px 3px rgba(0, 0, 0, 0.14),
+      0 8px 42px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-23: 0 11px 14px -7px rgba(0, 0, 0, 0.2), 0 23px 36px 3px rgba(0, 0, 0, 0.14),
+      0 9px 44px 8px rgba(0, 0, 0, 0.12);
+    --feather-shadow-24: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --feather-z-index-dropdown: 1000;
+    --feather-z-index-sticky: 1020;
+    --feather-z-index-fixed: 1030;
+    --feather-z-index-modal-backdrop: 1040;
+    --feather-z-index-modal: 1050;
+    --feather-z-index-popover: 1060;
+    --feather-z-index-tooltip: 1070;
+  }
+  
+  :root.dark {
+    --feather-color-background: 18, 18, 18; /* #121212 */
+    --feather-color-primary: 131, 226, 255; /* #83e2ff */
+    --feather-color-primary-variant: 190, 240, 255; /* #bef0ff */
+    --feather-color-secondary: 181, 212, 255; /* #b5d4ff */
+    --feather-color-secondary-variant: 212, 230, 255; /* #d4e6ff */
+    --feather-color-error: 255, 163, 181; /* #ffa3b5 */
+    --feather-color-success: 131, 238, 125; /* #83ee7d */
+    --feather-color-warning: 255, 172, 38; /* #ffac26 */
+    --feather-color-on-color: 0, 0, 0; /* #000000 */
+    --feather-color-on-surface: 255, 255, 255; /* #ffffff */
+    --feather-color-on-warning: 0, 0, 0; /* #000000 */
+    --feather-color-interactive-on-color: 0, 0, 0; /* #000000 */
+    --feather-color-interactive-on-surface: 131, 226, 255; /* #83e2ff */
+    --feather-color-interactive-on-warning: 255, 255, 255; /* #ffffff */
+    --feather-color-on-interactive-on-color: 255, 255, 255; /* #ffffff */
+    --feather-color-on-interactive-on-surface: 0, 0, 0; /* #000000 */
+    --feather-color-on-interactive-on-warning: 0, 0, 0; /* #000000 */
+    --feather-color-elevation-0: 21, 32, 37; /* #152025 */
+    --feather-color-elevation-1: 32, 43, 48; /* #202b30 */
+    --feather-color-elevation-2: 36, 47, 52; /* #242f34 */
+    --feather-color-elevation-3: 38, 49, 54; /* #263136 */
+    --feather-color-elevation-4: 40, 51, 56; /* #283338 */
+    --feather-color-elevation-6: 45, 56, 61; /* #2d383d */
+    --feather-color-elevation-8: 47, 58, 63; /* #2f3a3f */
+    --feather-color-elevation-12: 49, 60, 65; /* #313c41 */
+    --feather-color-elevation-16: 51, 62, 67; /* #333e43 */
+    --feather-color-elevation-24: 53, 64, 69; /* #354045 */
+    --feather-shadow-0: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+    --feather-shadow-1: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-2: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-3: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-4: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-5: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
+      0 1px 14px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-6: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --feather-shadow-7: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14),
+      0 2px 16px 1px rgba(0, 0, 0, 0.12);
+    --feather-shadow-8: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --feather-shadow-9: 0 5px 6px -3px rgba(0, 0, 0, 0.2), 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12);
+    --feather-shadow-10: 0 6px 6px -3px rgba(0, 0, 0, 0.2), 0 10px 14px 1px rgba(0, 0, 0, 0.14),
+      0 4px 18px 3px rgba(0, 0, 0, 0.12);
+    --feather-shadow-11: 0 6px 7px -4px rgba(0, 0, 0, 0.2), 0 11px 15px 1px rgba(0, 0, 0, 0.14),
+      0 4px 20px 3px rgba(0, 0, 0, 0.12);
+    --feather-shadow-12: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-13: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14),
+      0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-14: 0 7px 9px -4px rgba(0, 0, 0, 0.2), 0 14px 21px 2px rgba(0, 0, 0, 0.14),
+      0 5px 26px 4px rgba(0, 0, 0, 0.12);
+    --feather-shadow-15: 0 8px 9px -5px rgba(0, 0, 0, 0.2), 0 15px 22px 2px rgba(0, 0, 0, 0.14),
+      0 6px 28px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-16: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-17: 0 8px 11px -5px rgba(0, 0, 0, 0.2), 0 17px 26px 2px rgba(0, 0, 0, 0.14),
+      0 6px 32px 5px rgba(0, 0, 0, 0.12);
+    --feather-shadow-18: 0 9px 11px -5px rgba(0, 0, 0, 0.2), 0 18px 28px 2px rgba(0, 0, 0, 0.14),
+      0 7px 34px 6px rgba(0, 0, 0, 0.12);
+    --feather-shadow-19: 0 9px 12px -6px rgba(0, 0, 0, 0.2), 0 19px 29px 2px rgba(0, 0, 0, 0.14),
+      0 7px 36px 6px rgba(0, 0, 0, 0.12);
+    --feather-shadow-20: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 20px 31px 3px rgba(0, 0, 0, 0.14),
+      0 8px 38px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-21: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 21px 33px 3px rgba(0, 0, 0, 0.14),
+      0 8px 40px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-22: 0 10px 14px -6px rgba(0, 0, 0, 0.2), 0 22px 35px 3px rgba(0, 0, 0, 0.14),
+      0 8px 42px 7px rgba(0, 0, 0, 0.12);
+    --feather-shadow-23: 0 11px 14px -7px rgba(0, 0, 0, 0.2), 0 23px 36px 3px rgba(0, 0, 0, 0.14),
+      0 9px 44px 8px rgba(0, 0, 0, 0.12);
+    --feather-shadow-24: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  }
